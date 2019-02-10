@@ -1,0 +1,9 @@
+---
+layout: null
+---
+User-agent: *
+Disallow: /Error.html
+Disallow: /favicon.ico
+Disallow: /baidu_verify_ShlLYzRb3L.html
+
+Sitemap: {{ site.url }}/sitemap.xml

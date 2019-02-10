@@ -1,0 +1,75 @@
+---
+layout: default
+category: home
+full_title: 奇点科技
+---
+<mip-img src="{{ site.url }}/images/home/billboard.jpg" alt="为运输业高效发展而生的软件平台"></mip-img>
+<div class="margin-top-50"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="services-box">
+        <i class="fas fa-check"></i>
+        <h3>土方运输结算系统</h3>
+        <p>工地源头管控，防止黑车进出</p>
+        <p>消纳源头管控，监控整洁情况</p>
+        <p>运输过程管控，净化公共环境</p>
+        <p>数据上传云端，查询记录方便</p>
+        <p><a data-type="mip" data-title="土方运输结算系统" href="{{ site.url }}/muck/" class="btn btn-radius theme-btn-color margin-top-10">了解更多</a></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="services-box">
+        <i class="fas fa-cogs"></i>
+        <h3>第三方安全平台</h3>
+        <p>精准实时定位，查看实时状况</p>
+        <p>实时油控监测，防止偷油漏油</p>
+        <p>监控正反转设备，非法卸料即报警</p>
+        <p>多车单独监控，管理方便清晰</p>
+        <p><a data-type="mip" data-title="第三方安全平台" href="{{ site.url }}/security-platform/" class="btn btn-radius theme-btn-color margin-top-10">了解更多</a></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="services-box">
+        <i class="fas fa-users"></i>
+        <h3>TMS物流业务系统</h3>
+        <p>智能线路规划，减少运力过剩</p>
+        <p>智能调度策略，节省人力成本</p>
+        <p>灵活计费引擎，精准计算费用</p>
+        <p>丰富报表展现，支撑运营决策</p>
+        <p><a data-type="mip" data-title="TMS物流业务系统" href="{{ site.url }}/tms/" class="btn btn-radius theme-btn-color margin-top-10">了解更多</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="background-blue">
+  <div class="container">
+    <mip-img src="{{ site.url }}/images/home/car.png" class="margin-top-40 margin-btm-40 hidden-xs" alt=""></mip-img><mip-img src="{{ site.url }}/images/home/car-small.png" class="margin-top-40 margin-btm-40 hidden-sm hidden-md hidden-lg" alt=""></mip-img>
+  </div>
+</div>
+<div class="container">
+  {% include products-list.html %}
+</div>
+<div class="background-gray">
+  <div class="container">
+    <mip-img src="{{ site.url }}/images/home/service.png" class="margin-top-40 margin-btm-40 hidden-xs" alt="专注领域"></mip-img><mip-img src="{{ site.url }}/images/home/service-small.png" class="margin-top-40 margin-btm-40 hidden-sm hidden-md hidden-lg" alt="专注领域"></mip-img>
+  </div>
+</div>
+<div class="container">
+  <h3 class="heading-sec margin-top-50">行业资讯</h3>
+  <div class="row">{% for post in site.categories["news"] limit:3 %}
+    <div class="col-lg-4 col-md-6 margin-btm-20">
+      <div class="news-sec">
+        <div class="news-thumnail">
+          <a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
+        </div>
+        <div class="news-desc text-center">
+          <h3 class="blog-post-title"><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></h3>
+          <span class="news-post-cat">{{ post.date | date:"%Y年%m月%d日" }}</span>
+          <p>{{ post.description }}</p>
+        </div>
+      </div>
+    </div>{% endfor %}
+  </div>
+  <p class="text-center"><a href="{{ site.url }}/news/" class="btn btn-lg btn-radius theme-btn-color margin-top-20">查看更多</a></p>
+</div>

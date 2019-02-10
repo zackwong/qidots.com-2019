@@ -1,0 +1,21 @@
+url: http://qidots.com
+
+title: 奇点科技
+
+keywords: 奇点科技
+
+description: 奇点安防科技有限公司专业从事电子锁的技术集成、设计开发及制造，广泛应用于保险柜、安防门禁等领域，是电子锁智能解决方案的提供者和服务商。
+
+address: 广东省佛山市顺德区大良街道办事处古鉴村委会顺翔路39号2栋3层301号
+
+company: 佛山市顺德区捷通数码科技有限公司
+
+tel: 0757-22308231
+
+fax: 0757-22308126
+
+email: sale01@qidots.com
+
+exclude:
+  - README.md
+  - style.css

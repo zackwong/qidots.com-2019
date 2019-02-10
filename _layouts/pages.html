@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<section class="page-tree-bg">
+  <div class="container">
+    <h3 class="page-tree-text">{{ page.title }}</h3>
+  </div>
+</section>
+<div class="margin-top-70"></div>{% if page.category == 'solution' %}{{ content }}{% else %}
+<div class="container">
+  {{ content }}{% if page.case == 'case' %}
+  <p class="text-center"><a href="{{ site.url }}/case/" class="btn btn-radius theme-btn-color margin-top-30">查看更多案例</a></p>{% endif %}
+</div>{% endif %}

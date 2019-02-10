@@ -1,0 +1,30 @@
+<div class="sidebar-box">
+  <h4>联系我们</h4>
+  <p><i class="fas fa-map-marker-alt"></i> {{ site.address }}</p>
+  <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel1 }}">{{ site.tel1 }}（市场部）</a></p>
+  <p><i class="fas fa-cog"></i> <a href="tel:{{ site.tel3 }}">{{ site.tel3 }}（开发部）</a></p>
+  <p><i class="fas fa-user"></i> <a href="tel:{{ site.tel5 }}">{{ site.tel5 }}（客服部）</a></p>
+  <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
+</div>
+<hr class="margin-btm-30">
+<div class="sidebar-box">
+  <h4>行业解决方案</h4>
+  <ul class="cat-list">{% for post in site.categories["solution"] %}
+    <li><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
+  </ul>
+</div>
+<hr class="margin-btm-30">
+<div class="sidebar-box">
+  <h4>产品中心</h4>
+  <ul class="cat-list">{% for post in site.categories["products"] %}
+    <li><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
+  </ul>
+</div>
+<hr class="margin-btm-30">
+<div class="sidebar-box">
+  <h4>行业资讯</h4>{% for post in site.categories["news"] limit:18 %}
+  <div class="recent">
+    <p><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></p>
+    <span>{{ post.date | date:"%Y年%m月%d日" }}</span>
+  </div>{% endfor %}
+</div>
