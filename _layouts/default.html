@@ -15,15 +15,14 @@
     <style mip-custom>body {
   font-family: Helvetica, Arial, sans-serif;
   background: #fff;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 26px;
   font-weight: 400;
   color: #777;
   height: 100%;
-  margin: 0;
 }
 a {
-  color: #4c779e;
+  color: #0295d5;
   text-decoration: none;
   -moz-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
@@ -40,11 +39,14 @@ a.hover-color, .blog-post-title a:hover, .news-post-cat a:hover {
   transition: all 0.3s ease-in;
 }
 a.hover-color:hover, .blog-post-title a:hover, .news-post-cat a:hover {
-  color: #4c779e;
+  color: #0295d5;
   -moz-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+p {
+  margin-bottom: 15px;
 }
 i {
   display: inline-block;
@@ -172,6 +174,21 @@ i {
 }
 @media (max-width: 767px) {
   .hidden-xs {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
     display: none;
   }
 }
@@ -385,58 +402,104 @@ h6 {
 .text-right {
   text-align: right;
 }
-
 .text-center {
   text-align: center;
 }
-
 .text-justify {
   text-align: justify;
 }
 .text-primary {
-  color: #4c779e;
+  color: #0295d5;
 }
-/*image*/
-.image-margin-center {
-  margin: 0 auto 0 auto;
+.text-indent-2 {
+  text-indent: 2em;
 }
-.img-width-300 {
-    max-width: 300px;
+.background-gray {
+  background: #f5f5f5;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-.img-width-350 {
-    max-width: 350px;
+/*Image*/
+img {
+  vertical-align: middle;
+  width:auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-.img-width-400 {
-    max-width: 400px;
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
 }
-.img-width-450 {
-    max-width: 450px;
+.img-circle {
+  border-radius: 50%;
 }
-.img-width-500 {
-    max-width: 500px;
+/*table*/
+table {
+  border:1px solid #ccc;
+  width:100%;
+  margin:0;
+  padding:0;
+  border-collapse:collapse;
+  border-spacing:0;
+  margin:0 auto;
 }
-.img-width-550 {
-    max-width: 550px;
+table tr {
+  border:1px solid #ddd;
+  padding:5px;
 }
-.img-width-600 {
-    max-width: 600px;
+table th,table td {
+  padding:10px;
+  text-align:center;
 }
-.img-width-640 {
-    max-width: 640px;
+table th {
+  text-transform:uppercase;
+  font-size:14px;
+  letter-spacing:1px;
 }
-.img-width-650 {
-    max-width: 650px;
+@media screen and (max-width:600px) {
+  table {
+  border:0;
 }
-.img-width-660 {
-    max-width: 660px;
+table thead {
+  display:none;
 }
-.img-width-700 {
-    max-width: 700px;
+table tr {
+  margin-bottom:10px;
+  display:block;
+  border-bottom:2px solid #ddd;
 }
-
+table td {
+  display:block;
+  text-align:right;
+  font-size:13px;
+  border-bottom:1px dotted #ccc;
+}
+table td:last-child {
+  border-bottom:0;
+}
+table td:before {
+  content:attr(data-label);
+  float:left;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+}
 /*margin*/
 .margin-top-8 {
   margin-top: 8px;
+}
+.margin-top-10 {
+  margin-top: 10px;
 }
 .margin-top-20 {
   margin-top: 20px;
@@ -450,9 +513,6 @@ h6 {
 .margin-top-50 {
     margin-top: 50px;
 }
-.margin-top-58 {
-    margin-top: 58px;
-}
 .margin-top-70 {
     margin-top: 70px;
 }
@@ -465,7 +525,9 @@ h6 {
 .margin-btm-40 {
   margin-bottom: 40px;
 }
-
+.margin-btm-50 {
+  margin-bottom: 40px;
+}
 /*buttons*/
 .btn {
   font-weight: 700;
@@ -544,8 +606,8 @@ h6 {
 
 /*theme color button*/
 .theme-btn-color {
-  background-color: #4c779e;
-  border-color: #4c779e;
+  background-color: #0295d5;
+  border-color: #0295d5;
   color: #fff;
 }
 .theme-btn-color:hover {
@@ -566,7 +628,7 @@ h6 {
 .page-tree-bg {
   background-image: url("{{ site.url }}/images/assets/bread-bg.png");
   background-position: center 688px;
-  background-color: #4c779e;
+  background-color: #0295d5;
   padding: 40px 0;
   width: 100%;
   position: relative;
@@ -593,7 +655,7 @@ h3.page-tree-text {
   margin-bottom: 15px;
 }
 .sidebar-box h4:first-letter {
-  border-bottom: 5px solid #4c779e;
+  border-bottom: 5px solid #0295d5;
 }
 .sidebar-box .social-btn li a i {
   background-color: #000;
@@ -609,8 +671,7 @@ h3.page-tree-text {
 .cat-list li a {
   color: #555;
   font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 15px;
 }
 
 .recent {
@@ -721,7 +782,7 @@ h3.page-tree-text {
 }
 
 .blog-post-detail a {
-  color: #4c779e;
+  color: #0295d5;
 }
 
 .blog-post-more {
@@ -792,27 +853,15 @@ h3.heading-sec {
   letter-spacing: 4px;
 }
 
-/*reviews*/
-.reviews-box {
-  text-align: center;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #eee;
-}
-.reviews-box i {
-  color: #ffc001;
-  font-size: 18px;
-}
-
 /*services*/
 .services-box {
   text-align: center;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #eee;
 }
 .services-box i {
-  color: #4c779e;
+  color: #0295d5;
   font-size: 44px;
   margin-bottom: 15px;
   display: inline-block;
@@ -824,7 +873,7 @@ h3.heading-sec {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #4c779e;
+  border: 1px solid #0295d5;
   -moz-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
@@ -833,42 +882,19 @@ h3.heading-sec {
 .services-box h3 {
   font-size: 18px;
   margin-bottom: 0px;
-  color: #4c779e;
+  color: #0295d5;
   font-weight: 400;
   text-transform: uppercase;
 }
 .services-box:hover i {
-  border-color: #4c779e;
-  background-color: #4c779e;
+  border-color: #0295d5;
+  background-color: #0295d5;
   color: #fff;
 }
 .services-text h4 {
   color: #000;
   margin-bottom: 15px;
 }
-
-/*social buttons*/
-.social-btn li a {
-  display: block;
-}
-.social-btn li a i {
-  width: 35px;
-  height: 35px;
-  line-height: 32px;
-  text-align: center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.team.social-btn li a i {
-  color: #7a7a7a;
-  border: 2px solid #7a7a7a;
-}
-
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -905,19 +931,11 @@ h3.heading-sec {
   letter-spacing: 2px;
 }
 .footer-col h3:first-letter {
-  border-bottom: 5px solid #4c779e;
+  border-bottom: 5px solid #0295d5;
 }
 .footer-col p {
   font-size: 14px;
   color: #b3b3b3;
-}
-.footer-col .social-btn li a i {
-  color: #fff;
-  border: 2px solid #fff;
-}
-.footer-col .social-btn li a i:hover {
-  background-color: #4c779e;
-  border-color: #4c779e;
 }
 
 .post-list li a {
@@ -992,30 +1010,14 @@ mip-iframe,iframe {
                 <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
               </li>
               <li class="luxbar-item {% if page.category == 'home' %}active{% endif %}"><a data-type="mip" data-title="首页" href="{{ site.url }}">首页</a></li>
-              <li class="luxbar-item dropdown {% if page.category == 'about' %}active{% endif %}">
-                <a href="#">认识捷通</a>
-                <ul>
-                  <li class="luxbar-item {% if page.title == '企业简介' %}active{% endif %}"><a data-type="mip" data-title="企业简介" href="{{ site.url }}/about/">企业简介</a></li>
-                  <li class="luxbar-item {% if page.title == '企业文化' %}active{% endif %}"><a data-type="mip" data-title="企业文化" href="{{ site.url }}/culture/">企业文化</a></li>
-                  <li class="luxbar-item {% if page.title == '企业荣誉' %}active{% endif %}"><a data-type="mip" data-title="企业荣誉" href="{{ site.url }}/honors/">企业荣誉</a></li>
-                  <li class="luxbar-item {% if page.title == '职位招聘' %}active{% endif %}"><a data-type="mip" data-title="职位招聘" href="{{ site.url }}/job/">职位招聘</a></li>
-                </ul>
-              </li>
-              <li class="luxbar-item dropdown {% if page.category == 'solution' or page.category == 'case' %}active{% endif %}">
-                <a href="#">行业解决方案</a>
-                <ul>{% for post in site.categories["solution"] %}
-                  <li class="luxbar-item {% if post.title == page.title %}active{% endif %}"><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
-                  <li class="luxbar-item {% if page.category == 'case' %}active{% endif %}"><a data-type="mip" data-title="行业案例" href="{{ site.url }}/case/">行业案例</a></li>
-                </ul>
-              </li>
+              <li class="luxbar-item {% if page.category == 'about' %}active{% endif %}"><a data-type="mip" data-title="认识奇点" href="{{ site.url }}/about/">认识奇点</a></li>
               <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}">
                 <a href="#">产品中心</a>
-                <ul>{% for post in site.categories["products"] %}
-                  <li class="luxbar-item {% if post.title == page.title %}active{% endif %}"><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+                <ul>
+                  <li class="luxbar-item {% if post.title == page.title %}active{% endif %}"><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
                 </ul>
               </li>
-              <li class="luxbar-item {% if page.category == 'download' %}active{% endif %}"><a data-type="mip" data-title="软件下载" href="{{ site.url }}/download/">软件下载</a></li>
-              <li class="luxbar-item {% if page.category == 'join' %}active{% endif %}"><a data-type="mip" data-title="招商加盟" href="{{ site.url }}/join/">招商加盟</a></li>
+              <li class="luxbar-item {% if page.category == 'news' %}active{% endif %}"><a data-type="mip" data-title="行业资讯" href="{{ site.url }}/news/">行业资讯</a></li>
               <li class="luxbar-item {% if page.category == 'contact' %}active{% endif %}"><a data-type="mip" data-title="联系我们" href="{{ site.url }}/contact/">联系我们</a></li>
             </ul>
           </div>
@@ -1026,25 +1028,15 @@ mip-iframe,iframe {
     <div id="footer" class="margin-top-50">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 margin-btm-20 hidden-xs">
-            <div class="footer-col">
-              <h3>行业解决方案</h3>
-              <ul class="post-list list-unstyled">{% for post in site.categories["solution"] %}
-                <li><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
-                <li><a data-type="mip" data-title="行业案例" href="{{ site.url }}/case/">行业案例</a></li>
-                <li><a data-type="mip" data-title="软件下载" href="{{ site.url }}/download/">软件下载</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2 margin-btm-20 hidden-xs">
+          <div class="col-md-4 margin-btm-20 hidden-xs">
             <div class="footer-col">
               <h3>产品中心</h3>
-              <ul class="post-list list-unstyled">{% for post in site.categories["products"] %}
+              <ul class="post-list list-unstyled">
                 <li><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
               </ul>
             </div>
           </div>
-          <div class="col-md-3 margin-btm-20 hidden-xs">
+          <div class="col-md-4 margin-btm-20 hidden-xs">
             <div class="footer-col">
               <h3>行业资讯</h3>
               <ul class="post-list list-unstyled">{% for post in site.categories["news"] limit:3 %}
@@ -1056,17 +1048,15 @@ mip-iframe,iframe {
             <div class="footer-col">
               <h3>联系我们</h3>
               <p><i class="fas fa-map-marker-alt"></i> {{ site.address }}</p>
-              <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel1 }}">{{ site.tel1 }}（市场部）</a></p>
-              <p><i class="fas fa-cog"></i> <a href="tel:{{ site.tel3 }}">{{ site.tel3 }}（开发部）</a></p>
-              <p><i class="fas fa-user"></i> <a href="tel:{{ site.tel5 }}">{{ site.tel5 }}（客服部）</a></p>
+              <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
+              <p><i class="fas fa-fax"></i> {{ site.fax }}</p>
               <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
-              <mip-img src="/images/assets/weixin.jpg" alt="捷通数码微信公众号"></mip-img>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center footer-bottom margin-top-20">
-            <span>Copyright © 2006-2019 {{ site.company }} | <a href="{{ site.url }}/sitemap.xml">Sitemap</a> | 网站建设与维护：<a href="https://gdky.net" target="_blank">开源网络</a></span>
+            <span>Copyright © 2015-2019 佛山市奇点安防科技有限公司 | <a href="{{ site.url }}/sitemap.xml">Sitemap</a> | 网站建设与维护：<a href="https://gdky.net" target="_blank">开源网络</a></span>
           </div>
         </div>
       </div>
