@@ -46,13 +46,43 @@ full_title: 奇点科技
     </div>
   </div>
 </div>
-<div class="background-blue">
-  <div class="container">
-    <mip-img src="{{ site.url }}/images/home/car.png" class="margin-top-40 margin-btm-40 hidden-xs" alt=""></mip-img><mip-img src="{{ site.url }}/images/home/car-small.png" class="margin-top-40 margin-btm-40 hidden-sm hidden-md hidden-lg" alt=""></mip-img>
-  </div>
-</div>
 <div class="container">
-  {% include products-list.html %}
+  <h3 class="heading-sec margin-top-50">产品中心</h3>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 margin-btm-40">
+      <div class="portfolio-sec">
+        <div class="portfolio-thumnail">
+          <a data-type="mip" data-title="产品分类A" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/products/{{ post.image }}.jpg" alt="产品分类A"></mip-img></a>
+          <div class="portfolio-desc text-center">
+            <h4 class="portfolio-post-title">产品分类A</h4>
+            <h4><a data-type="mip" data-title="产品分类A" href="{{ site.url }}" class="btn theme-btn-default btn-lg">查看详情</a></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 margin-btm-40">
+      <div class="portfolio-sec">
+        <div class="portfolio-thumnail">
+          <a data-type="mip" data-title="产品分类A" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/products/{{ post.image }}.jpg" alt="产品分类A"></mip-img></a>
+          <div class="portfolio-desc text-center">
+            <h4 class="portfolio-post-title">产品分类A</h4>
+            <h4><a data-type="mip" data-title="产品分类A" href="{{ site.url }}" class="btn theme-btn-default btn-lg">查看详情</a></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 margin-btm-40">
+      <div class="portfolio-sec">
+        <div class="portfolio-thumnail">
+          <a data-type="mip" data-title="产品分类A" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/products/{{ post.image }}.jpg" alt="产品分类A"></mip-img></a>
+          <div class="portfolio-desc text-center">
+            <h4 class="portfolio-post-title">产品分类A</h4>
+            <h4><a data-type="mip" data-title="产品分类A" href="{{ site.url }}" class="btn theme-btn-default btn-lg">查看详情</a></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="background-gray">
   <div class="container">
@@ -75,5 +105,4 @@ full_title: 奇点科技
       </div>
     </div>{% endfor %}
   </div>
-  <p class="text-center"><a href="{{ site.url }}/news/" class="btn btn-lg btn-radius theme-btn-color margin-top-20">查看更多</a></p>
 </div>
