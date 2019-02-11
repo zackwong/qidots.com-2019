@@ -1014,7 +1014,9 @@ mip-iframe,iframe {
               <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}">
                 <a href="#">产品中心</a>
                 <ul>
-                  <li class="luxbar-item {% if post.title == page.title %}active{% endif %}"><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+                  <li class="luxbar-item {% if page.title == '产品分类A' %}active{% endif %}"><a data-type="mip" data-title="产品分类A" href="{{ site.url }}">产品分类A</a></li>
+                  <li class="luxbar-item {% if page.title == '产品分类A' %}active{% endif %}"><a data-type="mip" data-title="产品分类A" href="{{ site.url }}">产品分类A</a></li>
+                  <li class="luxbar-item {% if page.title == '产品分类A' %}active{% endif %}"><a data-type="mip" data-title="产品分类A" href="{{ site.url }}">产品分类A</a></li>
                 </ul>
               </li>
               <li class="luxbar-item {% if page.category == 'news' %}active{% endif %}"><a data-type="mip" data-title="行业资讯" href="{{ site.url }}/news/">行业资讯</a></li>
@@ -1032,7 +1034,9 @@ mip-iframe,iframe {
             <div class="footer-col">
               <h3>产品中心</h3>
               <ul class="post-list list-unstyled">
-                <li><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
+                <li><a data-type="mip" data-title="产品分类A" href="{{ site.url }}">产品分类A</a></li>
+                <li><a data-type="mip" data-title="产品分类A" href="{{ site.url }}">产品分类A</a></li>
+                <li><a data-type="mip" data-title="产品分类A" href="{{ site.url }}">产品分类A</a></li>
               </ul>
             </div>
           </div>
