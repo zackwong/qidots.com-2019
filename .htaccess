@@ -1,0 +1,6 @@
+# turn on redirection
+RewriteEngine on
+
+# redirect index.html to its folder
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://www.ltsjc.com/$1 [R=301,L]
