@@ -1,5 +1,4 @@
-<h3 class="heading-sec margin-top-50">产品中心</h3>
-<div class="row">{% for post in site.categories["products"] %}
+<div class="row">{% for post in site.categories["products"] %}{% if post.type == page.type %}
   <div class="col-lg-4 col-md-6 margin-btm-40">
     <div class="portfolio-sec">
       <div class="portfolio-thumnail">
@@ -10,5 +9,5 @@
         </div>
       </div>
     </div>
-  </div>{% endfor %}
+  </div>{% endif %}{% endfor %}
 </div>
