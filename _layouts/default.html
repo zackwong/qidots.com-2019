@@ -1051,7 +1051,7 @@ mip-iframe,iframe {
           <div class="col-md-3 margin-btm-20 hidden-xs">
             <div class="footer-col">
               <h3>行业资讯</h3>
-              <ul class="post-list list-unstyled">{% for post in site.categories["news"] limit:3 %}
+              <ul class="post-list list-unstyled">{% for post in site.categories["news"] limit:4 %}
                 <li><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
               </ul>
             </div>
