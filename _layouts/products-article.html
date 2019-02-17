@@ -3,13 +3,19 @@ layout: pages
 ---
 <div class="row">
   <div class="col-md-6 margin-btm-40">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}.jpg" alt="{{ post.title }}"></mip-img>
+    <mip-carousel autoplay defer="3500" layout="responsive" width="1000" height="667" indicator buttonController>
+      <div class="item active"><mip-img src="{{ site.url }}/images/products/{{ page.image }}.jpg" alt="{{ page.title }}"></mip-img></div>
+      <div class="item"><mip-img src="{{ site.url }}/images/products/{{ page.image }}-2.jpg" alt="{{ page.title }}"></div>
+      <div class="item"><mip-img src="{{ site.url }}/images/products/{{ page.image }}-3.jpg" alt="{{ page.title }}"></div>
+    </mip-carousel>
   </div>
   <div class="col-md-6 margin-btm-40">
     <h3 class=" margin-btm-20">{{ page.title }}</h3>
     {{ content }}
-    <p><a href="tel:{{ site.tel1 }}" class="btn btn-radius theme-btn-color margin-top-20"><i class="fas fa-phone"></i> 联系电话：{{ site.tel1 }}</a></p>
-    </div>
+    <hr>
+    <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
+    <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
+    <p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}(点击扫码)</span></p>
   </div>
   <div class="col-md-12">
     <h3 class="heading-sec margin-top-50">{{ page.type }}</h3>
