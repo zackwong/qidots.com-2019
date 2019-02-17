@@ -853,48 +853,6 @@ h3.heading-sec {
   letter-spacing: 4px;
 }
 
-/*services*/
-.services-box {
-  text-align: center;
-  margin-bottom: 10px;
-  padding: 20px;
-  border: 1px solid #eee;
-}
-.services-box i {
-  color: #fabf13;
-  font-size: 44px;
-  margin-bottom: 15px;
-  display: inline-block;
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
-  text-align: center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  border: 1px solid #fabf13;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-.services-box h3 {
-  font-size: 18px;
-  margin-bottom: 0px;
-  color: #fabf13;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.services-box:hover i {
-  border-color: #fabf13;
-  background-color: #fabf13;
-  color: #fff;
-}
-.services-text h4 {
-  color: #000;
-  margin-bottom: 15px;
-}
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -1064,7 +1022,13 @@ mip-iframe,iframe {
               <p><i class="fas fa-fax"></i> {{ site.fax }}</p>
               <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
               <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
-              <mip-img src="/images/assets/weixin.jpg" alt="奇点科技微信客服"></mip-img>
+              <p><i class="fab fa-weixin"></i> <a on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}</a></p>
+              <mip-lightbox id="weixin" layout="nodisplay" class="mip-hidden">
+                <div class="lightbox">
+                  <p><mip-img src="/images/assets/weixin.jpg" alt="奇点科技微信客服"></mip-img></p>
+                  <span on="tap:weixin.toggle" class="lightbox-close">关闭</span>
+                </div>
+              </mip-lightbox>
             </div>
           </div>
         </div>
@@ -1081,5 +1045,6 @@ mip-iframe,iframe {
     <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-gototop/mip-gototop.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-form/mip-form.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-lightbox/mip-lightbox.js"></script>
   </body>
 </html>
