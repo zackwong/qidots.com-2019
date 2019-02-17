@@ -992,7 +992,7 @@ mip-iframe,iframe {
           <div class="col-md-3 margin-btm-20 hidden-xs">
             <div class="footer-col">
               <h3>认识奇点</h3>
-              <p class="text-justify">奇点安防科技有限公司专业从事电子锁的技术集成、设计开发及制造，是电子锁智能解决方案的提供者和服务商。主要产品包括电子密码锁、磁卡锁、IC卡锁、指纹锁、微信扫码锁等。<a href="{{ site.url }}/about/">了解更多</a></p>
+              <p class="text-justify">奇点安防科技有限公司专业从事电子锁的技术集成、设计开发及制造，是电子锁智能解决方案的提供者和服务商。主要产品包括电子密码锁、磁卡锁、IC卡锁、指纹锁、微信扫码锁等。广泛应用于保险柜（箱），工业机箱机柜，安防门禁，公共收纳寄存，办公家具，家居收纳等领域。公司是国内外各大品牌保险柜，定制家具，办公家具，银行设备的电子锁的OEM和ODM供应制造商。<a href="{{ site.url }}/about/">了解更多</a></p>
             </div>
           </div>
           <div class="col-md-3 margin-btm-20 hidden-xs">
@@ -1009,7 +1009,7 @@ mip-iframe,iframe {
           <div class="col-md-3 margin-btm-20 hidden-xs">
             <div class="footer-col">
               <h3>行业资讯</h3>
-              <ul class="post-list list-unstyled">{% for post in site.categories["news"] limit:4 %}
+              <ul class="post-list list-unstyled">{% for post in site.categories["news"] limit:6 %}
                 <li><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
               </ul>
             </div>
@@ -1022,11 +1022,11 @@ mip-iframe,iframe {
               <p><i class="fas fa-fax"></i> {{ site.fax }}</p>
               <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
               <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
-              <p><i class="fab fa-weixin"></i> <a on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}</a></p>
+              <p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}(点击扫码)</span></p>
               <mip-lightbox id="weixin" layout="nodisplay" class="mip-hidden">
                 <div class="lightbox">
-                  <p><mip-img src="/images/assets/weixin.jpg" alt="奇点科技微信客服"></mip-img></p>
-                  <span on="tap:weixin.toggle" class="lightbox-close">关闭</span>
+                  <mip-img src="/images/assets/weixin.jpg" alt="奇点科技微信客服"></mip-img>
+                  <span on="tap:weixin.toggle" class="lightbox-close text-center">关闭</span>
                 </div>
               </mip-lightbox>
             </div>
