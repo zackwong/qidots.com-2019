@@ -1,7 +1,7 @@
 # turn on redirection
 RewriteEngine on
 
-# Forcing https
+# forcing https
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{SERVER_PORT} 80
 
