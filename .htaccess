@@ -7,8 +7,8 @@ RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
 
 # non-www redirects to www
 RewriteCond %{http_host} ^qidots.com [nc]
-RewriteRule ^(.*)$ http://www.qidots.com/$1 [L,R=301]
+RewriteRule ^(.*)$ https://www.qidots.com/$1 [L,R=301]
 
 # redirect index.html to its folder
 RewriteCond %{THE_REQUEST} ^.*/index.html
-RewriteRule ^(.*)index.html$ http://www.qidots.com/$1 [R=301,L]
+RewriteRule ^(.*)index.html$ https://www.qidots.com/$1 [R=301,L]
