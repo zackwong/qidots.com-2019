@@ -1,12 +1,16 @@
 # turn on redirection
 RewriteEngine on
 
+# Forcing https
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{SERVER_PORT} 80
+
 # http redirects to https
-RewriteCond %{SERVER_PORT} !^443$
-RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.qidots.com/$1 [L,R=301]
 
 # non-www redirects to www
-RewriteCond %{http_host} ^qidots.com [nc]
+RewriteCond %{HTTP_HOST} ^qidots.com [nc]
 RewriteRule ^(.*)$ https://www.qidots.com/$1 [L,R=301]
 
 # redirect index.html to its folder
