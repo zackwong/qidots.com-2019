@@ -336,15 +336,15 @@ mip-form div{ display:block; padding:0px; color:#000;font-size: 15px;}
 .luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
   transform: rotate(-45deg); }
 
-/*Navigation Color White*/
-.luxbar-menu-white,.luxbar-menu-white .dropdown ul {
-  background-color: #ffffff;
+/*Navigation Color Yellow*/
+.luxbar-menu-yellow,.luxbar-menu-yellow .dropdown ul {
+  background-color: #fdd100;
   color: #000000;
   z-index: 1;
 }
-.luxbar-menu-white .active,.luxbar-menu-white .luxbar-item:hover {
-  background-color: #e7e7e7; }
-.luxbar-menu-white .luxbar-hamburger span,.luxbar-menu-white .luxbar-hamburger span::before,.luxbar-menu-white .luxbar-hamburger span::after {
+.luxbar-menu-yellow .active,.luxbar-menu-yellow .luxbar-item:hover {
+  background-color: #fabf13; }
+.luxbar-menu-yellow .luxbar-hamburger span,.luxbar-menu-yellow .luxbar-hamburger span::before,.luxbar-menu-yellow .luxbar-hamburger span::after {
   background-color: #000000; }
 
 /*Typography*/
