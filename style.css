@@ -397,6 +397,9 @@ h6 {
 .text-primary {
   color: #fabf13;
 }
+.text-white {
+  color: #ffffff;
+}
 .text-indent-2 {
   text-indent: 2em;
 }
