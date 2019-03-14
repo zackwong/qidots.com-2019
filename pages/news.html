@@ -9,10 +9,10 @@ description:
   <div class="col-lg-4 col-md-6 margin-btm-20">
     <div class="news-sec">
       <div class="news-thumnail">
-        <a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
+        <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
       </div>
       <div class="news-desc text-center">
-        <h3 class="blog-post-title"><a data-type="mip" data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></h3>
+        <h3 class="blog-post-title"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></h3>
         <span class="news-post-cat">{{ post.date | date:"%Y年%m月%d日" }}</span>
         <p>{{ post.description }}</p>
       </div>

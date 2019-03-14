@@ -499,6 +499,9 @@ table td:before {
 .margin-top-50 {
     margin-top: 50px;
 }
+.margin-top-58 {
+    margin-top: 58px;
+}
 .margin-top-70 {
     margin-top: 70px;
 }
@@ -941,3 +944,4 @@ mip-iframe,iframe {
 .mip-fixed {
   right:1% !important
 }
+mip-fixed[type=bottom], mip-fixed[type=top]{overflow: initial;}
