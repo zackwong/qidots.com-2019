@@ -255,7 +255,7 @@ mip-form div{ display:block; padding:0px; color:#000;font-size: 15px;}
   margin-top: 8px; }
 
 .luxbar-checkbox {
-  display: none; }
+  display: none !important; }
   .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
   overflow: hidden;
   height: 58px; }
