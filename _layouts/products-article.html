@@ -14,11 +14,11 @@ layout: pages
     <h3 class="margin-btm-20">{{ page.type }}{{ page.title }}</h3>
     {{ content }}
     <hr class="margin-btm-20">
-    <div class="col-lg-4 col-md-6"><p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p></div>
-    <div class="col-lg-4 col-md-6"><p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p></div>
-    <div class="col-lg-4 col-md-6"><p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">点击扫码，添加好友</span></p></div>
-    <div class="col-lg-4 col-md-6"><p><i class="fas fa-bookmark"></i> <a href="https://qidots.github.io/manual/{{ page.image }}.pdf" target="_blank">产品说明书下载</a></p></div>{% if page.video == 'wu' %}{% else %}
-    <div class="col-lg-4 col-md-6"><p><i class="fas fa-video"></i> <a href="https://player.youku.com/embed/{{ page.video }}" target="_blank">产品介绍视频</a></p></div>{% endif %}
+    <div class="col-lg-4 col-md-6"><p>电话：<a href="tel:{{ site.tel }}">{{ site.tel }}</a></p></div>
+    <div class="col-lg-4 col-md-6"><p>QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p></div>
+    <div class="col-lg-4 col-md-6"><p>微信：<span on="tap:weixin.toggle" id="btn-open" tabindex="0">点击扫码，添加好友</span></p></div>
+    <div class="col-lg-4 col-md-6"><p><a href="https://qidots.github.io/manual/{{ page.image }}.pdf" target="_blank">产品说明书下载</a></p></div>{% if page.video == 'wu' %}{% else %}
+    <div class="col-lg-4 col-md-6"><p><a href="https://player.youku.com/embed/{{ page.video }}" target="_blank">产品介绍视频</a></p></div>{% endif %}
   </div>
   <div class="col-md-12">
     <h3 class="heading-sec margin-top-50">{{ page.type }}</h3>

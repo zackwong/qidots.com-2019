@@ -33,12 +33,12 @@ layout: pages
   <div class="col-md-4 hidden-xs">
     <div class="sidebar-box">
       <h4>联系我们</h4>
-      <p><i class="fas fa-map-marker-alt"></i> {{ site.address }}</p>
-      <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
-      <p><i class="fas fa-fax"></i> {{ site.fax }}</p>
-      <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
-      <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
-      <p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}(点击扫码)</span></p>
+      <p>地址：{{ site.address }}</p>
+      <p>电话：<a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
+      <p>传真：{{ site.fax }}</p>
+      <p>邮箱：{{ site.email }}</p>
+      <p>QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
+      <p>微信：<span on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}(点击扫码)</span></p>
     </div>
     <hr class="margin-btm-30">
     <div class="sidebar-box">
